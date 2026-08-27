@@ -92,12 +92,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_R11=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=0
 	export OF_QUICK_BACKUP_LIST="/boot;/recovery;/system_image;"
-	# -- end R11 settings --
-
-	# Device specific
-	export FOX_BUILD_TYPE="Unofficial-Beta"
-	export FOX_VERSION=R11.0
-	export OF_MAINTAINER=UdyneOS
+	export FOX_MAINTAINER_PATCH_VERSION="1"
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
