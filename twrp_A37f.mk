@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/twrpconfig/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from A37f device
 $(call inherit-product, device/oppo/A37f/device.mk)
