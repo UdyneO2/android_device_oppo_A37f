@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-FORCE_32_BIT := false
 DEVICE_PATH := device/oppo/A37f
 
+TARGET_SUPPORTS_64_BIT_APPS := false
+FORCE_32_BIT := false
 ifneq ($(FORCE_32_BIT),true)
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
