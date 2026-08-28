@@ -44,9 +44,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# Fox-specific flags
 	export OF_USE_GREEN_LED=0
 	export FOX_RESET_SETTINGS=1
-	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
 	export FOX_USE_NANO_EDITOR=1
@@ -56,15 +54,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export FOX_ENABLE_APP_MANAGER=1
 	export FOX_REPLACE_BUSYBOX_PS=1
-	export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
-	export FOX_REPLACE_TOOLBOX_GETPROP=1
-	export OF_FBE_METADATA_MOUNT_IGNORE=1
-        
-	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
 	export OF_USE_SYSTEM_FINGERPRINT=1
 	# run a process after formatting data to recreate /data/media/0 (only when forced-encryption is being disabled)
-	export OF_RUN_POST_FORMAT_PROCESS=1
-
 	#Addons
 	export FOX_DELETE_INITD_ADDON=1 # !- Causes bootloops sometimes -!
 	export FOX_DELETE_AROMAFM=1
@@ -75,23 +66,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# Removes the loop block errors after flashing ZIPs (Workaround)
 	export OF_LOOP_DEVICE_ERRORS_TO_LOG=1
 		
-	#Magiskboot
-	export OF_USE_MAGISKBOOT=1
-	export OF_USE_NEW_MAGISKBOOT=1
-	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
-
-	# OTA 
-	# vanilla build
-	export FOX_VANILLA_BUILD=1
-	export OF_DISABLE_OTA_MENU=1
+	
 	# OTA for custom ROMs
 	export OF_SUPPORT_ALL_PAYLOAD_OTA_UPDATES=1
-
-	
-    # -- add settings for R11 --
-	export FOX_R11=1
-	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=0
-	export OF_QUICK_BACKUP_LIST="/boot;/recovery;/system_image;"
+	export OF_QUICK_BACKUP_LIST="/boot;/recovery;"
 	export FOX_MAINTAINER_PATCH_VERSION="1"
 
 	# let's see what are our build VARs
